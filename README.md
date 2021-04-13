@@ -39,7 +39,7 @@ Pass a configuration object to `.simpleTabs()`:
       label:    'Demo Tab 1',       // tab label, required
       url:      'demo-tab-1.html',  // page/anchor URL, required
       spacers:  2,                  // number of spacers between tabs, optional, default: 1
-      classes:  'forAdminOnly'      // add additional classes as needed optional
+      classes:  'forAdminOnly'      // add additional classes as needed, optional
     },
     // etc...
   ],
