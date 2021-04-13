@@ -1,0 +1,58 @@
+/**
+ * Simple tabs plugin for jQuery, showing bigger tags in the center
+ * @version    1.0.0
+ * @release    2021-04-12
+ * @repository https://github.com/peterthoeny/jquery.simpletabs
+ * @author     Peter Thoeny, https://twiki.org/ & https://github.com/peterthoeny
+ * @copyright  2021 Peter Thoeny, https://github.com/peterthoeny
+ * @license    MIT, https://opensource.org/licenses/mit-license
+ */
+.jqSimpleTabsContainer {
+    width: 100%;
+    margin: 20px 0 20px 0;
+    white-space: nowrap;
+}
+.jqSimpleTabsTable {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.jqSimpleTabsContainer .jqSimpleTabsActive {
+    background: linear-gradient(to bottom, #ececec, #ffffff);
+    border: 1px solid #aaa;
+    border-bottom: 0 none;
+    padding: 3px 10px;
+    -moz-box-shadow: 2px -1px 3px #eee;
+    -webkit-box-shadow: 2px -1px 3px #eee;
+    box-shadow: 2px -1px 3px #eee;
+}
+.jqSimpleTabsContainer .jqSimpleTabsInactive {
+    background: linear-gradient(to bottom, #f6f6f6, #dddddd);
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #888;
+    padding: 3px 10px;
+    -moz-box-shadow: 2px 0 3px #ccc;
+    -webkit-box-shadow: 2px 0 3px #ccc;
+    box-shadow: 2px 0 3px #ccc;
+}
+.jqSimpleTabsContainer .jqSimpleTabsInactive a {
+    text-decoration: none;
+}
+.jqSimpleTabsContainer .jqSimpleTabsBefore,
+.jqSimpleTabsContainer .jqSimpleTabsSpacer,
+.jqSimpleTabsContainer .jqSimpleTabsAfter {
+    background-color: transparent;
+    background: linear-gradient(to bottom, transparent, #edeae6);
+    border: 0 none;
+    border-bottom: 1px solid #888;
+}
+.jqSimpleTabsContainer .jqSimpleTabsBefore {
+    padding: 0 12px;
+}
+.jqSimpleTabsContainer .jqSimpleTabsSpacer {
+    padding: 0 6px;
+}
+.jqSimpleTabsContainer .jqSimpleTabsAfter {
+    width: 99%;
+}
+
+/* EOF */

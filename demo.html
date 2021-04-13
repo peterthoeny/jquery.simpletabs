@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Demo of Simple Tabs jQuery Plugin</title>
+  <link href="jquery.simpletabs.css" rel="stylesheet" type="text/css" media="all" />
+  <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript" charset="utf-8"></script>
+  <script src="jquery.simpletabs.js" type="text/javascript" charset="utf-8"></script>
+  <script src="demo.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      $('#simpleTabsDemo').simpleTabs(tabsConfig, 'demoTab1');
+    });
+  </script>
+  <link rel="stylesheet" href="jquery.simpletabs.css" />
+  <style type="text/css">
+    body {
+        padding: 3px 10px;
+  		background-color: #ffffff;
+        font-family: "helvetica"; 
+  		color: #000000;
+    }
+    h1 { font-size: 2em; color: #000000; margin: 3px 0 10px 0; }
+    h2 { font-size: 1.2em; color: #000000; margin: 3px 0 10px 0; }
+    hr { border: 0; border-bottom: 1px solid #aaa; }
+    textarea {
+        color: white;
+        background-color: #333;
+        padding: 3px 3px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Demo of <tt>jquery.simpletabs</tt> jQuery Plugin</h1>
+    <p>The <tt>jquery.simpletabs</tt> plugin shows a tabs bar for navigation. The tabs can be defined once, and shared across multiple HTML pages.</p>
+    <div id="simpleTabsDemo"></div>
+    <p>This demo has two pages, <b><tt>demo.html</tt></b> (this page), and <tt>demo2.html</tt> - click on a tab to switch.</p>
+    <p>The tabs can be styled, see default <a href="jquery.simpletabs.css" target="_blank"><tt>jquery.simpletabs.css</tt></a>.</p>
+    <table><tr><th>
+        demo.html
+    </th><th>
+        demo.js
+    </th></tr>
+    <tr><td style="vertical-align: top;">
+        <textarea style="width: 36em; height: 22em;" readonly="readonly">
+&lt;html>
+  &lt;head>
+  &lt;link href="jquery.simpletabs.css" rel="stylesheet" />
+  &lt;script src="https://code.jquery.com/jquery-latest.js">&lt;/script>
+  &lt;script src="jquery.simpletabs.js">&lt;/script>
+  &lt;script src="demo.js">&lt;/script>
+  &lt;script>
+    $(document).ready(function() {
+      $('#demoTabs').simpleTabs(tabsConfig, 'demoTab1');
+    });
+  &lt;/script>
+&lt;/head>
+&lt;body>
+  &lt;div id="demoTabs">&lt;/div>
+&lt;/body>
+&lt;/html></textarea>
+        </td><td style="vertical-align: top;">
+            <textarea style="width: 40em; height: 22em;" readonly="readonly">
+let tabsConfig = {
+  tabs: [
+    { id: 'demoTab1', label: 'Demo Tab 1', url: 'demo.html'  },
+    { id: 'demoTab2', label: 'Demo Tab 2', url: 'demo2.html' }
+  ]
+};</textarea>
+        </td></tr></table>
+        <hr />
+        <p>Repository: <a href="https://github.com/peterthoeny/jquery.simpletabs" target="_blank">
+        https://github.com/peterthoeny/jquery.simpletabs</a></p>
+        <p>Author: <a href="https://github.com/peterthoeny" target="_blank">
+        https://github.com/peterthoeny</a></p>
+        <hr />
+    </div>
+</body>
+</html>

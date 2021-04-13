@@ -1,0 +1,27 @@
+{
+  "name": "jquery.simpletabs",
+  "title": "jQuery Simple Tabs",
+  "description": "jQuery plugin for a simple clickable tab interface",
+  "keywords": [
+    "jquery-plugin",
+    "uix",
+    "tabs"
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Peter Thoeny",
+    "url": "https://github.com/peterthoeny"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://opensource.org/licenses/mit-license"
+    }
+  ],
+  "bugs": "https://github.com/peterthoeny/jquery.simpletabs/issues",
+  "homepage": "https://github.com/peterthoeny/jquery.simpletabs",
+  "repository": "https://github.com/peterthoeny/jquery.simpletabs",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
+}

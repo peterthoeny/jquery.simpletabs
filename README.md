@@ -1,1 +1,52 @@
-# jquery.simpletabs
+# jquery.simpletabs v1.0.0
+
+The `jquery.simpletabs` plugin shows a tabs bar for navigation. The tabs can be defined once, and shared across multiple HTML pages. Multiple tabs bars can be shown on a page for nested navigation.</p>
+
+![Sample screenshot](screenshot.png)
+
+## Usage
+
+```
+<link href="/path/to/jquery.simpletabs/jquery.simpletabs.css" rel="stylesheet" type="text/css" media="all" />
+<script src="/path/to/jquery.simpletabs.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-latest.js" type="text/javascript" charset="utf-8"></script>
+<script src="/path/to/jquery.simpletabs.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  let tabsConfig = {
+    tabs: [
+      { id: 'demoTab1', label: 'Demo Tab 1', url: 'demo-tab-1.html' },
+      { id: 'demoTab2', label: 'Demo Tab 2', url: 'demo-tab-2.html' }
+    ]
+  };
+  $(document).ready(function() {
+    $('#simpleTabsDemo').simpleTabs(tabsConfig, 'demoTab1');
+  });
+</script>
+<div id="simpleTabsDemo"></div>
+```
+
+To show a tab interface across multiple pages, where each page shows its own tab in active state, define the tabs configuration once, and pass it as the first parameter to `.simpleTabs()`. The second parameter indicates the ID of the active tab. Above example is for the first page `demo-tab-1.html`. 
+
+## Configuration
+
+Pass a configuration object to `.simpleTabs()`:
+
+```
+{
+  tabs: [
+    {
+      id:       'demoTab1',         // HTML ID of tab, must be unique per page, required
+      label:    'Demo Tab 1',       // tab label, required
+      url:      'demo-tab-1.html',  // page/anchor URL, required
+      spacers:  2,                  // number of spacers between tabs, optional, default: 1
+      classes:  'forAdminOnly'      // add additional classes as needed optional
+    },
+    // etc...
+  ],
+  debug: false
+}
+```
+
+## Demo
+
+See [demo.html](https://peterthoeny.github.io/jquery.simpletabs/demo.html)
