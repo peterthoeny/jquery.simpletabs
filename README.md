@@ -25,7 +25,7 @@ The `jquery.simpletabs` plugin shows a tabs bar for navigation. The tabs can be 
 <div id="simpleTabsDemo"></div>
 ```
 
-To show a tab interface across multiple pages, where each page shows its own tab in active state, define the tabs configuration once, and pass it as the first parameter to `.simpleTabs()`. The second parameter indicates the ID of the active tab. Above example is for the first page `demo-tab-1.html`. 
+Define the tabs configuration once as an object in a JavaScript file. Include that in your HTML pages, and pass the tabs configration object as the first parameter to `.simpleTabs()`. The second parameter indicates the ID of the active tab. Above example is for the first page `demo-tab-1.html`. 
 
 ## Configuration
 
