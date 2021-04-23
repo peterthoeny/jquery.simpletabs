@@ -1,4 +1,4 @@
-# jquery.simpletabs v1.1.0
+# jquery.simpletabs v1.2.0
 
 The `jquery.simpletabs` plugin shows a tabs bar for navigation. The tabs can be defined once, and shared across multiple HTML pages. Multiple tabs bars can be shown on a page for nested navigation.</p>
 
@@ -49,7 +49,8 @@ Pass a configuration object to `.simpleTabs()`:
       tooltip:  'This is a demo',   // tooltip message for tab, optional
       url:      'demo-tab-1.html',  // page/anchor URL, required
       spacers:  2,                  // number of spacers preceeding tab, optional, default: 1
-      classes:  'forAdminOnly'      // add additional classes as needed, optional
+      tabClass: 'forAdminOnly',     // add classes to tab, optional, default: 'jqSimpleTabsTab'
+      spacerClass: 'forAdminOnly'   // add classes to spacer, optional, default: 'jqSimpleTabsSpacer'
     },
     // etc...
   ],
