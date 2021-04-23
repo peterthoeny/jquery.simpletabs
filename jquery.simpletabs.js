@@ -1,7 +1,7 @@
 /**
  * Simple tabs plugin for jQuery, showing bigger tags in the center
- * @version    1.0.0
- * @release    2021-04-12
+ * @version    1.1.0
+ * @release    2021-04-22
  * @repository https://github.com/peterthoeny/jquery.simpletabs
  * @author     Peter Thoeny, https://twiki.org/ & https://github.com/peterthoeny
  * @copyright  2021 Peter Thoeny, https://github.com/peterthoeny
@@ -54,7 +54,13 @@
                     classes.push(c);
                 });
             }
-            html += '<td class="' + classes.join(' ') + '" id="' + item.id + '">' + label + '</td>';
+            var attrs = [];
+            attrs.push('class="' + classes.join(' ') + '"');
+            attrs.push('id="' + item.id + '"');
+            if(item.tooltip) {
+               attrs.push('title="' + item.tooltip + '"');
+            }
+            html += '<td ' + attrs.join(' ') + '>' + label + '</td>';
             tabs.push(html);
         });
         var html = '<table class="jqSimpleTabsTable"><tr><td class="jqSimpleTabsBefore"></td>'
