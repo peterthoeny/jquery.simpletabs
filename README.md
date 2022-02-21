@@ -1,4 +1,4 @@
-# jquery.simpletabs v1.2.1
+# jquery.simpletabs v1.2.2
 
 The `jquery.simpletabs` plugin shows a tabs bar for navigation. The tabs can be defined once, and shared across multiple HTML pages. Multiple tabs bars can be shown on a page for nested navigation.</p>
 
