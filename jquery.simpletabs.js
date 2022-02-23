@@ -100,6 +100,7 @@
             tabs.push(html);
         });
 
+        // build tabs table from tabs array
         let html = '<table class="jqSimpleTabsTable"><tr><td class="jqSimpleTabsBefore"></td>'
             + tabs.join('')
             + '<td class="jqSimpleTabsAfter"></td></tr></table>';
@@ -108,8 +109,16 @@
 
     $.fn.simpleTabs.defaults = {
         tabs: [
-            { id: 'demoTab1', label: 'Demo Tab 1', url: '#demoTab1' },
-            { id: 'demoTab2', label: 'Demo Tab 2', url: '#demoTab2' }
+            {
+                id:     'demoTab1',
+                label:  'Demo Tab 1',
+                url:    '#demoTab1'
+            },
+            {
+                id:     'demoTab2',
+                label:  'Demo Tab 2',
+                url:    '#demoTab2'
+            }
         ]
     };
 
