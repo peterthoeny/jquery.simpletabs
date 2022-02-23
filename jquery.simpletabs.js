@@ -47,31 +47,41 @@
         if(options.debug != undefined) {
            debug = options.debug;
         }
+        debugLog('options: ' + JSON.stringify(options, null, ''));
+
         if(activeTab) {
+            // set active tab
             options.activeTab = activeTab;
         }
-        debugLog('options: ' + JSON.stringify(options, null, ''));
-        var tabs = [];
+
+        let tabs = []; // array of tabs, each preceded by a spacer
         options.tabs.forEach(function(item, idx) {
-            var html = '';
-            var spacers = parseInt(item.spacers, 10);
+            let html = '';
+
+            // add one ore more spacers before tab:
+            let spacers = parseInt(item.spacers, 10);
             if(Number.isNaN(spacers) && idx > 0) {
+                // default is 1 spacer
                 spacers = 1;
             }
-            var classes = [ 'jqSimpleTabsSpacer' ];
+            let classes = [ 'jqSimpleTabsSpacer' ];
             if(item.spacerClass) {
                 item.spacerClass.split(/\s+/).forEach(function(c) {
                     classes.push(c);
                 });
             }
-            for(var n = 0; n < spacers; n++) {
+            for(let n = 0; n < spacers; n++) {
                 html += '<td class="' + classes.join(' ') + '"></td>';
             }
+
+            // add tab
             classes = [ 'jqSimpleTabsTab' ];
-            var label = item.label;
+            let label = item.label;
             if(item.id === options.activeTab) {
+                // show tab as active
                 classes.push('jqSimpleTabsActive');
             } else {
+                // show tab as inactive
                 classes.push('jqSimpleTabsInactive');
                 label = '<a href="' + item.url + '">' + label + '</a>';
             }
@@ -80,7 +90,7 @@
                     classes.push(c);
                 });
             }
-            var attrs = [];
+            let attrs = [];
             attrs.push('class="' + classes.join(' ') + '"');
             attrs.push('id="' + item.id + '"');
             if(item.tooltip) {
@@ -89,7 +99,8 @@
             html += '<td ' + attrs.join(' ') + '>' + label + '</td>';
             tabs.push(html);
         });
-        var html = '<table class="jqSimpleTabsTable"><tr><td class="jqSimpleTabsBefore"></td>'
+
+        let html = '<table class="jqSimpleTabsTable"><tr><td class="jqSimpleTabsBefore"></td>'
             + tabs.join('')
             + '<td class="jqSimpleTabsAfter"></td></tr></table>';
         self.html(html);
