@@ -31,6 +31,16 @@
 
     'use strict';
 
+    function entityEncode(val) {
+        val = val.toString()
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+        return val;
+    }
+
     let debug = false;
 
     function debugLog(msg) {
@@ -49,16 +59,17 @@
         }
         debugLog('options: ' + JSON.stringify(options, null, ''));
 
+        // set active tab
         if(activeTab) {
-            // set active tab
             options.activeTab = activeTab;
         }
 
-        let tabs = []; // array of tabs, each preceded by a spacer
+        // define array of tabs, each tab is preceded by a spacer
+        let tabs = [];
         options.tabs.forEach(function(item, idx) {
             let html = '';
 
-            // add one ore more spacers before tab:
+            // add one ore more spacers before the tab:
             let spacers = parseInt(item.spacers, 10);
             if(Number.isNaN(spacers) && idx > 0) {
                 // default is 1 spacer
@@ -66,6 +77,7 @@
             }
             let classes = [ 'jqSimpleTabsSpacer' ];
             if(item.spacerClass) {
+                // add tab spacer classes if defined
                 item.spacerClass.split(/\s+/).forEach(function(c) {
                     classes.push(c);
                 });
@@ -86,6 +98,7 @@
                 label = '<a href="' + item.url + '">' + label + '</a>';
             }
             if(item.tabClass) {
+                // add tab classes if defined
                 item.tabClass.split(/\s+/).forEach(function(c) {
                     classes.push(c);
                 });
@@ -94,7 +107,8 @@
             attrs.push('class="' + classes.join(' ') + '"');
             attrs.push('id="' + item.id + '"');
             if(item.tooltip) {
-               attrs.push('title="' + item.tooltip + '"');
+                // add tooltip if defined
+                attrs.push('title="' + entityEncode(item.tooltip) + '"');
             }
             html += '<td ' + attrs.join(' ') + '>' + label + '</td>';
             tabs.push(html);
