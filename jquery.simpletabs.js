@@ -1,10 +1,10 @@
 /**
  * jquery.simpletabs jQuery plugin
- * @version    1.2.3
- * @release    2022-02-22
+ * @version    1.2.4
+ * @release    2024-09-11
  * @repository https://github.com/peterthoeny/jquery.simpletabs
  * @author     Peter Thoeny, https://twiki.org/ & https://github.com/peterthoeny
- * @copyright  2021-2022 Peter Thoeny, https://github.com/peterthoeny
+ * @copyright  2021-2024 Peter Thoeny, https://github.com/peterthoeny
  * @license    MIT, https://opensource.org/licenses/mit-license
  */
 
@@ -54,10 +54,10 @@
         self.addClass('jqSimpleTabsContainer');
         let addLink = options && options.tag && options.tag.format ? false : true;
         options = $.extend({}, $.fn.simpleTabs.defaults, options);
+        debugLog('options: ' + JSON.stringify(options, null, ''));
         if(options.debug != undefined) {
            debug = options.debug;
         }
-        debugLog('options: ' + JSON.stringify(options, null, ''));
 
         // set active tab
         if(activeTab) {

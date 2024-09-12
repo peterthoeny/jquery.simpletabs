@@ -1,10 +1,10 @@
 /**
  * jquery.simpletabs jQuery plugin
- * @version    1.2.3
- * @release    2022-02-22
+ * @version    1.2.4
+ * @release    2024-09-11
  * @repository https://github.com/peterthoeny/jquery.simpletabs
  * @author     Peter Thoeny, https://twiki.org/ & https://github.com/peterthoeny
- * @copyright  2021-2022 Peter Thoeny, https://github.com/peterthoeny
+ * @copyright  2021-2024 Peter Thoeny, https://github.com/peterthoeny
  * @license    MIT, https://opensource.org/licenses/mit-license
  */
 .jqSimpleTabsContainer {
@@ -14,12 +14,14 @@
 }
 .jqSimpleTabsTable {
     border-spacing: 0;
-    border-collapse: collapse;
+    border-collapse: separate;
 }
 .jqSimpleTabsContainer .jqSimpleTabsActive {
     background: linear-gradient(to bottom, #ececec, #ffffff);
     border: 1px solid #aaa;
     border-bottom: 0 none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     padding: 3px 10px;
     -moz-box-shadow: 2px -1px 3px #eee;
     -webkit-box-shadow: 2px -1px 3px #eee;
@@ -29,6 +31,8 @@
     background: linear-gradient(to bottom, #f6f6f6, #dddddd);
     border: 1px solid #aaa;
     border-bottom: 1px solid #888;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     padding: 3px 10px;
     -moz-box-shadow: 2px 0 3px #ccc;
     -webkit-box-shadow: 2px 0 3px #ccc;
