@@ -54,7 +54,7 @@ Pass a configuration object to `.simpleTabs()`:
     },
     // etc...
   ],
-  linkActiveTab: false              // link the active tab, true or false, default false
+  linkActiveTab: false,             // link the active tab, true or false, default false
   debug: false
 }
 ```
