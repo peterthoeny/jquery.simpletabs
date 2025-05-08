@@ -1,10 +1,10 @@
 /**
  * jquery.simpletabs jQuery plugin
- * @version    1.2.4
- * @release    2024-09-11
+ * @version    1.2.5
+ * @release    2025-05-07
  * @repository https://github.com/peterthoeny/jquery.simpletabs
  * @author     Peter Thoeny, https://twiki.org/ & https://github.com/peterthoeny
- * @copyright  2021-2024 Peter Thoeny, https://github.com/peterthoeny
+ * @copyright  2021-2025 Peter Thoeny, https://github.com/peterthoeny
  * @license    MIT, https://opensource.org/licenses/mit-license
  */
 
@@ -92,6 +92,9 @@
             if(item.id === options.activeTab) {
                 // show tab as active
                 classes.push('jqSimpleTabsActive');
+                if(options.linkActiveTab || item.linkActiveTab) {
+                    label = '<a href="' + item.url + '">' + label + '</a>';
+                }
             } else {
                 // show tab as inactive
                 classes.push('jqSimpleTabsInactive');
